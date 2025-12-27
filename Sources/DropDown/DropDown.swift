@@ -20,8 +20,9 @@ import SwiftUI
 /// - important: when placing the dropdown in a view it is important that its z-index is higher than the views it may
 /// overlap in expanded state, so that it will appear above these views when expanded.
 ///
-/// - important: to "dismiss" (i.e collapse) the dropdown list by tapping outside the view, a tag gesture recognizer
-/// should be placed to the parent view. that will set isExpanded to false
+/// - important: to "dismiss" (i.e collapse) the dropdown list by tapping outside the view, a onTapGesture modifier
+/// should be added to the parent view. The enclosing action would  be `isExpanded = true`
+
 
 public struct DropDown: View {
     @Environment(\.font) private var font
